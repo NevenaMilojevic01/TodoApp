@@ -1,0 +1,175 @@
+:root {
+  --gradient: linear-gradient(
+    100deg,
+    rgba(45, 112, 1253, 0.73) 0%,
+    #163e92 100%
+  );
+
+  --dark: black;
+  --button-purple: purple;
+  --background: white;
+  --border: lightgrey;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient);
+}
+.todo-name,
+.user-message {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 2px solid var(--dark);
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.todo-name:hover,
+.user-message:hover,
+.add-btn:hover,
+.delete-task:hover,
+.decreasing-btn:hover,
+.increasing-btn:hover {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.719);
+}
+
+.add-btn {
+  background-color: var(--button-purple);
+  border: 2px solid var(--button-purple);
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  margin: 20px 0;
+  width: 30%;
+  position: relative;
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.delete-task {
+  background-color: var(--button-purple);
+  border: 2px solid var(--button-purple);
+  border-radius: 10px;
+  color: white;
+  font-size: 12px;
+  padding: 6px;
+  width: 15%;
+  position: relative;
+}
+
+.container {
+  border: solid 2px var(--border);
+  border-radius: 30px;
+  padding: 40px;
+  height: 100%;
+  width: 60%;
+  max-width: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background: var(--background);
+  margin-top: 10px;
+}
+
+.todo-text {
+  text-transform: uppercase;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.text-container {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.disabled {
+  display: flex;
+  text-decoration: line-through;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  overflow-y: scroll;
+}
+
+.todo-checkbox:checked {
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  text-align: center;
+  accent-color: purple;
+}
+
+.scroll {
+  height: 16rem;
+  padding: 0 10px;
+  overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--button-purple);
+  border-radius: 10px;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  border: solid 2px var(--border);
+  border-radius: 10px;
+}
+
+.todo-p {
+  font-size: 20px;
+}
+
+.sort-button {
+  border-radius: 30px;
+  padding: 20px;
+  height: 50%;
+  width: 60%;
+  max-width: 30rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.decreasing-btn,
+.increasing-btn {
+  background-color: var(--button-purple);
+  border: 2px solid var(--button-purple);
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  height: 20%;
+  width: 30%;
+}
